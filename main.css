@@ -1,0 +1,118 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+};
+
+@font-face {
+ font-family: Roboto;
+ src: url(./font/Roboto-Black.ttf);
+ src: url(./font/Roboto-Bold.ttf);
+ src: url(./font/Roboto-Light.ttf);
+ src: url(./font/Roboto-Medium.ttf);
+ src: url(./font/Roboto-Regular.ttf);
+}
+
+body{
+ font-family: Roboto, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ width: 100vw;
+ height: 100vh;
+}
+
+#outer-container{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 400px;
+ /* border: 1px solid gold; */
+ padding: 4px;
+}
+
+#app-name{
+ color: goldenrod;
+ margin: 2%;
+}
+
+#child-one, #child-two{
+ /* border: 1px dotted green; */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ margin: 4%;
+}
+
+    #input-el{
+     padding: 10px 12px;
+     width: 80%;
+     margin-bottom: 3%;
+     font-size: large;
+     border-radius: 6px;
+     border: 2px solid goldenrod;
+    }
+
+    #input-btn{
+     padding: 10px 2px;
+     width: 25%;
+     font-size: medium;
+     background-color: #1b1a0d;
+     color: #eee;
+     font-weight: 500;
+     border-radius: 7px;
+    }
+
+  #card-head{
+   /* border: 1px solid red; */
+   width: 80%;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #eee;
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+   border: 2px solid #e2e2e2;
+   border-bottom: none;
+   padding: 2px;
+  }
+
+      #city-name{
+       font-size: x-large;
+       font-weight: 400;
+      }
+
+  #card-body{
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   border: 2px solid #e2e2e2;
+   height: 200px;
+  }
+
+      #weather-type{
+       /* border: 1px solid red; */
+       font-size: xx-large;
+      }
+
+      #temp-readings{
+       list-style: none;
+       /* border: 1px solid red; */
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+      }
+
+      #temp-readings > li {
+       margin: 6px;
+       font-size: large;
+      }

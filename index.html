@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- FavIcon -->
+ <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+ <link rel="manifest" href="./favicon/site.webmanifest">
+
+ <!-- App Title -->
+ <title>Weather App</title>
+
+ <!-- CSS Stylesheet -->
+ <link rel="stylesheet" href="./main.css">
+
+
+</head>
+<body>
+ 
+ <div id="outer-container">
+  <h1 id="app-name">Weather App</h1>
+  <div id="child-one">
+    <input type="text" id="input-el">
+    <button id="input-btn">Search</button>
+  </div>
+
+  <div id="child-two">
+   <div id="card-head">
+     <h4 id="city-name">-----</h4>
+   </div>
+
+   <div id="card-body">
+     <h4 id="weather-type">----</h4>
+     <ul id="temp-readings">
+      <li id="average-temp">Temp: <span id="av-temp">----</span>&deg;C </li>
+      <li id="max-temp">Max Temp: <span id="mx-temp">----</span>&deg;C </li>
+      <li id="min-temp">Min Temp: <span id="mn-temp">----</span>&deg;C </li>
+     </ul>
+   </div>
+
+  </div>
+
+ </div>
+
+ <!-- JavaScript  -->
+ <script src="./app.js"></script>
+
+</body>
+</html>
