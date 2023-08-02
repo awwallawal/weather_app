@@ -45,7 +45,7 @@ let extractWeatherData = () => {
   console.log(data)
   if(data.cod == 404){
    errorMessage.style.display = "block";
-   errorHead.textContent = `Error Message: ${data.message}`;
+   errorHead.textContent = `Error Message: Temporarily, ${data.message} `;
    errorBody.textContent = `Please refresh the page and check city input`;
    cityName.textContent = data.cod;
    weatherType.textContent = "----";
