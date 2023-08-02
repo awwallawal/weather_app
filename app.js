@@ -23,7 +23,15 @@ let fetchWeatherData = (city) => {
  return weatherPromise.then((Response)=>{
   return Response.json();
  }).catch((error)=>{
-  return (`Kindly check your internet setting ${error}`)
+  // return (`Kindly check your internet setting ${error}`)
+  errorMessage.style.display = "block";
+  errorHead.textContent = `${error}`;
+  errorBody.textContent = `Kindly check your internet setting`;
+  cityName.textContent = "Failed to fetch";
+  weatherType.textContent = "---";
+  averageTemp.textContent = "---";
+  maxTemp.textContent = "---";
+  minTemp.textContent = "---";
  })
 };
 
