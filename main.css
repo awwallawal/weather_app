@@ -116,3 +116,14 @@ body{
        margin: 6px;
        font-size: large;
       }
+#error-message {
+    font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    color: red;
+    font-weight: 500;
+    gap: 5px;
+}

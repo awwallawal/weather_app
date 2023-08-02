@@ -7,6 +7,12 @@ let averageTemp = document.getElementById("av-temp");
 let maxTemp = document.getElementById("mx-temp");
 let minTemp = document.getElementById("mn-temp");
 const apiCall = "https://api.openweathermap.org/data/2.5/weather?";
+let errorMessage = document.getElementById("error-message");
+let errorHead = document.getElementById("error-head");
+let errorBody = document.getElementById("error-body");
+
+
+window.onload = (errorMessage.style.display = "none")
 
 
 let fetchWeatherData = (city) => {
@@ -29,7 +35,18 @@ let extractWeatherData = () => {
  let extract = fetchWeatherData(city);
  return extract.then((data)=>{
   console.log(data)
-  showWeatherData(data);
+  if(data.cod == 404){
+   errorMessage.style.display = "block";
+   errorHead.textContent = `Error Message: ${data.message}`;
+   errorBody.textContent = `Please refresh the page and check city input`;
+   cityName.textContent = data.cod;
+   weatherType.textContent = "----";
+   averageTemp.textContent = "----";
+   maxTemp.textContent = "----";
+   minTemp.textContent = "----";
+  }else{
+   showWeatherData(data);
+  }
  })
 }
 
@@ -43,5 +60,17 @@ let showWeatherData = (weatherParameters)=>{
 
 inputBtn.addEventListener("click", ()=>{
 extractWeatherData();
-inputEl.value = "";
+clearCard();
 });
+
+function clearCard (){
+inputEl.value = "";
+errorMessage.style.display = "none";
+errorHead.textContent = "";
+errorBody.textContent = "";
+cityName.textContent = "Retrieving";
+weatherType.textContent = "Retrieving";
+averageTemp.textContent = "Retrieving";
+maxTemp.textContent = "Retrieving";
+minTemp.textContent = "Retrieving";
+}
